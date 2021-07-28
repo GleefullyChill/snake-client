@@ -11,12 +11,21 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
+  conn.on("connect", () => {
+    console.log("connected to the game")// code that does something when the connection is first established
+
+    conn.write('Name: beb');
+    // setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 1000)
+    
+  });
+
   conn.on("data", data => {
     console.log(data)// code that does something when the connection is first established
   });
 
   return conn;
 };
-console.log("Connecting ...");
-connect();
+
 module.exports = connect;
