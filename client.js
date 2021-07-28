@@ -14,10 +14,8 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("connected to the game");// code that does something when the connection is first established
 
-    conn.write('Name: beb');
-    // setInterval(() => {
-    //   conn.write('Move: up');
-    // }, 1000)
+    conn.write('Name: emo');
+
     
   });
 
