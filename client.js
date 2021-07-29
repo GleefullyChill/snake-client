@@ -1,21 +1,18 @@
 const net = require("net");
+const { IP, PORT } = require('./constants')
 
 const connect = function() {
   const conn = net.createConnection({
-    host: '135.23.223.133',// IP address here,
-    port: 50542
+    host: IP,// IP address here,
+    port: PORT
   });
 
-
-  
-  // interpret incoming data as text
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
     console.log("connected to the game");// code that does something when the connection is first established
 
     conn.write('Name: emo');
-
     
   });
 

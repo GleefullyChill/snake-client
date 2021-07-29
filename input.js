@@ -1,22 +1,8 @@
-
+const { ctrlC, up, down, right, left, mesOne, mesTwo, mesThr, mesFou, mesFiv, mesSix, mesSev, mesEig, mesNin, mesZer } = require('./constants');
 let connection;
 
 const handleUserInput = data => {
-  const ctrlC = "\u0003";
-  const up = "\u0077";
-  const down = "\u0073";
-  const right = "\u0064";
-  const left = "\u0061";
-  const mesOne = "\u0031";
-  const mesTwo = "\u0032";
-  const mesThr = "\u0033";
-  const mesFou = "\u0034";
-  const mesFiv = "\u0035";
-  const mesSix = "\u0036";
-  const mesSev = "\u0037";
-  const mesEig = "\u0038";
-  const mesNin = "\u0039";
-  const mesZer = "\u0030";
+
 
   switch (data) {
   case ctrlC:
@@ -37,34 +23,34 @@ const handleUserInput = data => {
   }
   switch (data) {
   case mesOne:
-    connection.write('Say: What gives life meaning?');
+    connection.write('Say: Does life mean?');
     break;
   case mesTwo:
-    connection.write('Say: Where does hope come from?');
+    connection.write('Say: Does hope come?');
     break;
   case mesThr:
-    connection.write('Say: God has abandoned his flock. 👿');
+    connection.write('Say: God has abandoned. 👿');
     break;
   case mesFou:
-    connection.write('Say: What gives you the right to judge ME?');
+    connection.write('Say: The right to judge ME?');
     break;
   case mesFiv:
-    connection.write('Say:Sound like YOU have the attitude problem. 🙄');
+    connection.write('Say: YOU have the attitude problem. 🙄');
     break;
   case mesSix:
-    connection.write(`Say: When a tree falls in the forest NO ONE CARES 😭`);
+    connection.write(`Say: NO ONE CARES 😭`);
     break;
   case mesSev:
-    connection.write(`'Say: This is the way the world ends, not with a bang, but with a whimper'`);
+    connection.write(`Say: 'But with a whimper'`);
     break;
   case mesEig:
-    connection.write('Say: Have you read any Edgar Allen Poe?');
+    connection.write('Say: Edgar Allen Poe!');
     break;
   case mesNin:
     connection.write("Say: Drink water!");
     break;
   case mesZer:
-    connection.write("Say: Get up and move around!");
+    connection.write("Say: Get up and move!");
     break;
   }
 };
